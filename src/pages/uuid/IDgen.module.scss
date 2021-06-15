@@ -1,19 +1,7 @@
 .main {
-	display: grid;
-	place-content: center;
-
 	height: calc(100vh - 5rem);
 
-	background: var(--theme-1-300);
-}
-
-.options {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-.option {
-	color: var(--light-300);
+	background: var(--theme-1-500);
 }
 
 .container {

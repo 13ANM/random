@@ -1,0 +1,32 @@
+.container {
+	display: grid;
+	place-items: center;
+	background: red;
+	height: 5rem;
+}
+
+.options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: green;
+	width: 22.5rem;
+}
+
+.option {
+	color: var(--light-300);
+	background: var(--theme-1-border);
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+	height: 1.5rem;
+
+	& * {
+		margin: 0 0.3rem;
+	}
+
+	& label {
+		font-size: 0.8rem;
+		display: flex;
+		align-items: center;
+	}
+}
