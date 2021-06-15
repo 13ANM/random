@@ -1,7 +1,7 @@
 .container {
 	display: grid;
 	place-items: center;
-	background: red;
+	// background: red;
 	height: 5rem;
 }
 
@@ -9,7 +9,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: green;
 	width: 22.5rem;
 }
 
@@ -28,5 +27,12 @@
 		font-size: 0.8rem;
 		display: flex;
 		align-items: center;
+	}
+}
+
+.value {
+	& label {
+		display: grid;
+		color: var(--light-300);
 	}
 }

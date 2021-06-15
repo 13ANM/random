@@ -1,0 +1,25 @@
+.result {
+	display: grid;
+	place-items: center;
+	height: 25rem;
+}
+
+.container {
+	width: 27.5rem;
+	height: 20rem;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.75rem;
+	background: var(--theme-1-400);
+	overflow-y: scroll;
+}
+
+.number {
+	color: white;
+	line-height: 1.5rem;
+}
+
+.uppercase {
+	color: white;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+}
