@@ -27,12 +27,17 @@ export const UuidProvider = ({ children }: any) => {
 	const [hyphens, setHyphens] = useState<boolean>(false);
 	const amtRef = useRef<HTMLInputElement>();
 
+	const contLength = uuidsContainer.length > 500;
+
 	useEffect(() => {
-		if (uuidsContainer.length >= 200) {
-			let cont = uuidsContainer.splice(0, 200);
+		let cont = uuidsContainer.splice(0, 500);
+
+		if (contLength) {
 			setUuidsContainer(cont);
+		} else {
+			return;
 		}
-	}, [uuidsContainer.length >= 200]);
+	}, [contLength]);
 
 	console.log(uuidsContainer);
 
@@ -57,7 +62,7 @@ export const UuidProvider = ({ children }: any) => {
 			// @ts-ignore: Object is possibly 'null'.
 			number <= parseInt(amount) &&
 			// @ts-ignore: Object is possibly 'null'.
-			parseInt(amount) <= 201;
+			parseInt(amount) <= 500;
 			number++
 		) {
 			uuids.push(randomUuid());

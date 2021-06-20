@@ -12,8 +12,8 @@ const Options: React.FC = () => {
 		<div className={styles.container}>
 			<form className={styles.value} onSubmit={generateUuid}>
 				<label htmlFor='amt'>
-					How many UUIDs would you like? (1-200)
-					<input type='number' min='1' max='200' id='amt' ref={amtRef} />
+					How many UUIDs would you like? (1-500)
+					<input type='number' min='1' max='500' id='amt' ref={amtRef} />
 					<button type='submit'></button>
 				</label>
 			</form>
@@ -26,7 +26,7 @@ const Options: React.FC = () => {
 							type='checkbox'
 							id='upp'
 							checked={uppercase}
-							onClick={() => setUppercase(!uppercase)}
+							onChange={() => setUppercase(!uppercase)}
 						/>
 					</label>
 				</li>
@@ -37,7 +37,7 @@ const Options: React.FC = () => {
 							type='checkbox'
 							id='brc'
 							checked={braces}
-							onClick={() => setBraces(!braces)}
+							onChange={() => setBraces(!braces)}
 						/>
 					</label>
 				</li>
@@ -48,7 +48,7 @@ const Options: React.FC = () => {
 							type='checkbox'
 							id='hyp'
 							checked={!hyphens}
-							onClick={() => setHyphens(!hyphens)}
+							onChange={() => setHyphens(!hyphens)}
 						/>
 					</label>
 				</li>
