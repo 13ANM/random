@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 const Nav: React.FC = () => {
 	const [activeLink, setActiveLink] = useState<number>(1);
 
+	console.log(activeLink);
+
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.container}>

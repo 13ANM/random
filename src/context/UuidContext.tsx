@@ -29,9 +29,10 @@ export const UuidProvider = ({ children }: any) => {
 
 	useEffect(() => {
 		if (uuidsContainer.length >= 200) {
-			uuidsContainer.splice(0, 200);
+			let cont = uuidsContainer.splice(0, 200);
+			setUuidsContainer(cont);
 		}
-	}, [uuidsContainer]);
+	}, [uuidsContainer.length >= 200]);
 
 	console.log(uuidsContainer);
 
@@ -56,7 +57,7 @@ export const UuidProvider = ({ children }: any) => {
 			// @ts-ignore: Object is possibly 'null'.
 			number <= parseInt(amount) &&
 			// @ts-ignore: Object is possibly 'null'.
-			parseInt(amount) <= 200;
+			parseInt(amount) <= 201;
 			number++
 		) {
 			uuids.push(randomUuid());

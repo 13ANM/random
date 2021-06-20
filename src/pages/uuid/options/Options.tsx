@@ -31,22 +31,22 @@ const Options: React.FC = () => {
 					</label>
 				</li>
 				<li className={styles.option}>
-					<label htmlFor='upp'>
+					<label htmlFor='brc'>
 						Braces
 						<input
 							type='checkbox'
-							id='upp'
+							id='brc'
 							checked={braces}
 							onClick={() => setBraces(!braces)}
 						/>
 					</label>
 				</li>
 				<li className={styles.option}>
-					<label htmlFor='upp'>
+					<label htmlFor='hyp'>
 						Hyphens
 						<input
 							type='checkbox'
-							id='upp'
+							id='hyp'
 							checked={!hyphens}
 							onClick={() => setHyphens(!hyphens)}
 						/>
